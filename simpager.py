@@ -12,7 +12,7 @@ from lfu import *
 from opt import *
 from rand import *
 from mfu import *
-#from mru import *
+from mru import *
 
 
 ##################################################
@@ -21,17 +21,8 @@ from mfu import *
 #
 ##################################################
 def main():
+    print "hello"
 
-    r = os.pipe()
-    r = os.fdopen(r)
-    str = r.read()
-    print str
-
-    # for line in sys.stdin:
-    #     sys.stdout.write(line)
-
-    # for arg in sys.argv[1:]:
-    #     print arg
 
 # Execute main function
 if __name__ == "__main__": main()
