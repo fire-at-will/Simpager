@@ -13,6 +13,13 @@ from opt import *
 from rand import *
 from mfu import *
 from mru import *
+from constants import *
+
+##################################################
+#
+#               Global Variables
+#
+##################################################
 
 
 ##################################################
@@ -21,7 +28,7 @@ from mru import *
 #
 ##################################################
 def main():
-    print "hello"
+
 
 
 # Execute main function
