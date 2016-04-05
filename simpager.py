@@ -5,6 +5,7 @@
 ##################################################
 import sys
 import os
+import fileinput
 
 from fifo import *
 from lru import *
@@ -22,13 +23,21 @@ from mfu import *
 ##################################################
 def main():
 
-    r = os.pipe()
-    r = os.fdopen(r)
-    str = r.read()
-    print str
-
-    # for line in sys.stdin:
-    #     sys.stdout.write(line)
+    # r = os.pipe()
+    # r = os.fdopen(r)
+    # str = r.read()
+    # print str
+    if len(sys.argv) == 2:
+        print "FILE"
+        for line in sys.stdin:
+            sys.stdout.write(line)
+    else:
+        print "READ IN"
+        while(True):
+            line = raw_input()
+            if line == "":
+                break
+            print line
 
     # for arg in sys.argv[1:]:
     #     print arg
