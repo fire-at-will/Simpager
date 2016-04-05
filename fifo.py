@@ -1,2 +1,2 @@
 def fifo():
-    print "FIFO"
+    print "First in first out"

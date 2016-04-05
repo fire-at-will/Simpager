@@ -1,0 +1,2 @@
+def rand():
+    print "Random"
