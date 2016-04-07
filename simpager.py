@@ -24,14 +24,9 @@ from mru import *
 def main():
     print "hello"
 
-    # r = os.pipe()
-    # r = os.fdopen(r)
-    # str = r.read()
-    # print str
     if len(sys.argv) == 2:
-        print "FILE"
         for line in sys.stdin:
-            sys.stdout.write(line)
+            #store variables
     else:
         print "READ IN"
         while(True):
@@ -40,8 +35,6 @@ def main():
                 break
             print line
 
-    # for arg in sys.argv[1:]:
-    #     print arg
 
 # Execute main function
 if __name__ == "__main__": main()
