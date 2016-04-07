@@ -57,7 +57,7 @@ def main():
             elif count == 1:
                 frames = int(line)
             else:
-                algorithms[count-2] = line #IndexError: list assignment index out of range
+                algorithms.append(line) #IndexError: list assignment index out of range
             count = count + 1
 
 
