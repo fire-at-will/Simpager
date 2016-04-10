@@ -60,10 +60,33 @@ def main():
                 algorithms.append(line) #IndexError: list assignment index out of range
             count = count + 1
 
+    printVals(page_array, frames, algorithms)
 
-    print page_array
-    print frames
-    print algorithms
+
+def printVals(page_array, frames, algorithms):
+    page_string = ""
+    for page in page_array:
+        page_string = page_string + page + " "
+    print page_string
+    print "Number of Frames: " + str(frames)
+
+    for alg in algorithms:
+        if alg == "FIFO":
+            fifo(page_array, frames)
+        elif alg == "LRU":
+            lru(page_array, frames)
+        elif alg == "LFU":
+            lfu(page_array, frames)
+        elif alg == "OPT":
+            opt(page_array, frames)
+        elif alg == "RAND":
+            # Not sure about this yet
+        elif alg == "MFU":
+            mfu(page_array, frames)
+        elif alg == "MRU":
+            mru(page_array, frames)
+
+
 
 # Execute main function
 if __name__ == "__main__": main()
