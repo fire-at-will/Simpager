@@ -64,7 +64,7 @@ def main():
 
 
 def printVals(page_array, frames, algorithms):
-    page_string = ""
+    page_string = "Page Reference String:\n"
     for page in page_array:
         page_string = page_string + page + " "
     print page_string
@@ -81,6 +81,7 @@ def printVals(page_array, frames, algorithms):
             opt(page_array, frames)
         elif alg == "RAND":
             # Not sure about this yet
+            rand(page_array, frames)
         elif alg == "MFU":
             mfu(page_array, frames)
         elif alg == "MRU":
