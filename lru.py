@@ -9,7 +9,7 @@ def lru():
         if page in frame_array:
             continue #should skip to next iteration
         else:
-            if insertions >= 3:
+            if insertions >= frames:
                 #calculate min of counts of pages in frame_array
 
                 frame_array[frame_index] = page
