@@ -80,7 +80,6 @@ def printVals(page_array, frames, algorithms):
         elif alg == "OPT":
             opt(page_array, frames)
         elif alg == "RAND":
-            # Not sure about this yet
             rand(page_array, frames)
         elif alg == "MFU":
             mfu(page_array, frames)
