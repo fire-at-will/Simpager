@@ -8,7 +8,7 @@ def fifo(page_array, frames):
         if page in frame_array:
             continue #should skip to next iteration
         else:
-            if insertions >= 3:
+            if insertions >= frames:
                 frame_array[frame_index] = page
             else:
                 frame_array.insert(frame_index, page)
