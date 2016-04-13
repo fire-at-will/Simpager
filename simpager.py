@@ -14,6 +14,13 @@ from opt import *
 from rand import *
 from mfu import *
 from mru import *
+from constants import *
+
+##################################################
+#
+#               Global Variables
+#
+##################################################
 
 # global variables
 algorithms = []
