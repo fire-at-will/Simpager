@@ -20,6 +20,9 @@ def lru(page_array, frames):
 
     for page in page_array:
         if page in frame_array:
+            #increment event counter and store in counter_array
+            event_time = event_time + 1
+            counter_array[page] = event_time
             continue #should skip to next iteration
         else:
             #if we know frame_array has no empty slots
@@ -40,7 +43,7 @@ def lru(page_array, frames):
 
         #increment event counter
         event_time = event_time + 1
-
+        print frame_array
         #put event_time in counter_array at loc. page
         counter_array[page] = event_time
 
