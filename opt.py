@@ -11,17 +11,20 @@ def opt(page_array, frames):
 
     for page in page_array:
         if page in frame_array:
+            print frame_array
             cur_index = cur_index + 1
             continue
         else:
             #if we know frame_array has no empty slots
             if insertions >= frames:
                 replace_index = findIndex(cur_index, page_array, frame_array)
+                frame_array[replace_index] = page
             #if frame_array is not yet full
             else:
                 frame_array.insert(frame_index, page)
                 frame_index = frame_index + 1
-
+            insertions = insertions + 1
+            print frame_array
             page_faults = page_faults + 1
         cur_index = cur_index + 1
 
