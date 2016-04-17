@@ -1,3 +1,18 @@
+####################################################################################################
+#
+#               mru Function
+#
+#       Purpose -
+#       This function will replace the most recently used page. Not the best algorithm.
+#
+#       Input -
+#       array of pages to be replaced; and the size of the frame_array
+#
+#       Output -
+#       prints out the algorithm name and the number of page faults to standard out
+#
+####################################################################################################
+
 def mru(page_array, frames):
 
     #map string array to ints

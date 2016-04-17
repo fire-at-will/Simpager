@@ -1,3 +1,19 @@
+####################################################################################################
+#
+#               opt Function
+#
+#       Purpose -
+#       This function will replace the page in the frame_array that will not occur again for the longest
+#       amount of time.
+#
+#       Input -
+#       array of pages to be replaced; and the size of the frame_array
+#
+#       Output -
+#       prints out the algorithm name and the number of page faults to standard out
+#
+####################################################################################################
+
 def opt(page_array, frames):
 
     #map string array to ints
@@ -27,16 +43,36 @@ def opt(page_array, frames):
 
     print "OPT: " + str(page_faults)
 
+####################################################################################################
+#
+#               findIndex Function
+#
+#       Purpose -
+#       This function is called by opt to find the index of the page in the frame_array that should
+#       be replaced.
+#
+#       Input -
+#       array of pages to be replaced, the size of the frame_array, and the current index in page array
+#
+#       Output -
+#       returns the index of page to be replaced
+#
+####################################################################################################
+
 def findIndex(cur_index, page_array, frame_array):
     index_to_return = 0
     max_index_count = 0
     for page_in_frame in frame_array:
         index_count = 0
+        #loop forward through the array from current location
         for page in page_array[cur_index+1:]:
+            #if you find the page occurence then stop
             if page == page_in_frame:
                 break
+            #otherwise increment swap value
             else:
                 index_count = index_count + 1
+        #keep track of max swap value and its corresponding index to replace
         if index_count > max_index_count:
             max_index_count = index_count
             index_to_return = frame_array.index(page_in_frame)
