@@ -1,3 +1,18 @@
+####################################################################################################
+#
+#               lru Function
+#
+#       Purpose -
+#       This function will replace the page in the frame_array that was least recently used.
+#
+#       Input -
+#       array of pages to be replaced; and the size of the frame_array
+#
+#       Output -
+#       prints out the algorithm name and the number of page faults to standard out
+#
+####################################################################################################
+
 def lru(page_array, frames):
 
     #map string array to ints
