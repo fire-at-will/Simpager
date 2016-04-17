@@ -33,11 +33,16 @@ def mfu(page_array, frames):
 
 
 def determineMFUPageToKick(frame_array, pageUseCount):
+    # Figure out which page to kick.
+    # Here we want to kick the page that has the highest usage count
+
+    # Generate array of counts
     accessCounts = []
     for page in frame_array:
         timesAccessed = pageUseCount[page]
         accessCounts.append(timesAccessed)
 
+    # Max algorithm
     maxAccess = -1
     maxIndex = -1
 

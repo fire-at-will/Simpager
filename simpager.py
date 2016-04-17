@@ -24,7 +24,6 @@
 ##################################################
 import sys
 import os
-import fileinput
 
 from fifo import *
 from lru import *
