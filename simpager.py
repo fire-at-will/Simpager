@@ -36,6 +36,7 @@ page_array = []
 def main():
     algorithms = []
 
+<<<<<<< HEAD
     count = 0
 
     while True:
