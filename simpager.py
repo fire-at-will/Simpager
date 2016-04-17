@@ -36,6 +36,7 @@ page_array = []
 def main():
     algorithms = []
 
+    #file input 
     if len(sys.argv) == 2:
         count = 0
 
@@ -49,6 +50,7 @@ def main():
             else:
                 algorithms[count-2] = line
             count = count + 1
+    #input from user
     else:
         count = 0
         while(True):

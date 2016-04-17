@@ -12,7 +12,7 @@ def opt(page_array, frames):
     for page in page_array:
         cur_index = cur_index + 1
         if page in frame_array:
-            print frame_array
+            # print frame_array
             continue
         else:
             #if we know frame_array has no empty slots
