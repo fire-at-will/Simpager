@@ -43,7 +43,6 @@ def mru(page_array, frames):
 
         #increment event counter
         event_time = event_time + 1
-        # print frame_array
         #put event_time in counter_array at loc. page
         counter_array[page] = event_time
 
