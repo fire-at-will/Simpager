@@ -36,35 +36,23 @@ page_array = []
 def main():
     algorithms = []
 
-    if len(sys.argv) == 2:
-        count = 0
+    count = 0
 
-        #read file specs into variables
-        for line in sys.stdin:
-            #store variables
-            if count == 0:
-                page_array = line.split(' ')
-            elif count == 1:
-                frames = int(line)
-            else:
-                algorithms[count-2] = line
-            count = count + 1
-    else:
-        count = 0
-        while(True):
-            line = raw_input()
-
-            #check for last input
+    while True:
+        try:
+            line = raw_input("")
+        except EOFError:
+            break;
+        else:
             if line == "":
-                break
-
-            #store variables
+                break;
+            # Process input
             if count == 0:
                 page_array = line.split(' ')
             elif count == 1:
                 frames = int(line)
             else:
-                algorithms.append(line) #IndexError: list assignment index out of range
+                algorithms.append(line)
             count = count + 1
 
     printVals(page_array, frames, algorithms)
