@@ -33,11 +33,16 @@ def lfu(page_array, frames):
 
 
 def determineLFUPageToKick(frame_array, pageUseCount):
+    # Figure out which page to kick.
+    # Here we want to kick the page that has the smallest usage count
+
+    # Generate count array
     accessCounts = []
     for page in frame_array:
         timesAccessed = pageUseCount[page]
         accessCounts.append(timesAccessed)
 
+    # Min algorithm
     minAccess = 10000
     minIndex = 10000
 

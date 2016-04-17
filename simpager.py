@@ -5,7 +5,6 @@
 ##################################################
 import sys
 import os
-import fileinput
 
 from fifo import *
 from lru import *
@@ -36,7 +35,6 @@ page_array = []
 def main():
     algorithms = []
 
-<<<<<<< HEAD
     count = 0
 
     while True:
